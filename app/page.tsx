@@ -1,3 +1,4 @@
+import Cards from "@/components/Cards";
 import Courses from "@/components/Courses";
 import HeroSection from "@/components/HeroSection";
 import Why from "@/components/Why";
@@ -11,6 +12,7 @@ export default function Home() {
 <HeroSection/>
 <Courses/>
 <Why/>
+<Cards/>
     </main>
 </>
   );
