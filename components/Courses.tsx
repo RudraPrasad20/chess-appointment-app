@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import CourseData from "@/data/music_courses.json";
+import courses from "@/data/courses.json";
 import Link from "next/link";
 import { BackgroundGradient } from "./ui/background-gradient";
 
@@ -17,7 +17,7 @@ interface CourseInterface {
 }
 
 const Courses = () => {
-  const allCourses = CourseData.courses.filter(
+  const allCourses = courses.courses.filter(
     (course: CourseInterface) => course.isFeatured
   );
 

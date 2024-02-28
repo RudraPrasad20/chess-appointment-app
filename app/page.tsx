@@ -1,6 +1,8 @@
 import Cards from "@/components/Cards";
 import Courses from "@/components/Courses";
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import Instructors from "@/components/Instructors";
 import UpcomintCourses from "@/components/UpcomintCourses";
 import Why from "@/components/Why";
 import Image from "next/image";
@@ -15,6 +17,8 @@ export default function Home() {
 <Why/>
 <Cards/>
 <UpcomintCourses/>
+<Instructors/>
+<Footer/>
     </main>
 </>
   );
