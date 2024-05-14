@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
+import { ModeToggle } from "./darkmode";
 
 
 const Navbar = ({ className }: { className?: string }) => {
@@ -29,6 +30,7 @@ const Navbar = ({ className }: { className?: string }) => {
             <HoveredLink href="/contact">mail</HoveredLink>
             </div>
             </MenuItem>
+            <ModeToggle/>
         </Menu>
         </div>
   )

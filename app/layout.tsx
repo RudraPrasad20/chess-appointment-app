@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "react-hot-toast";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,11 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={inter.className}>
-        <div className="relative w-full flex items-center justify-center ">
-          <Navbar/>
-        </div>
-        {children}
-        </body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Toaster/>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
